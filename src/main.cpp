@@ -20,21 +20,25 @@ void loop() {
   if (digitalRead(PIN1) == LOW) {
     if (millis() - lastDebounceTime < DEBOUNCE_DELAY) { return;}
     Serial.println('A');
+    if (DEBUG) { Serial.println("Button A pressed"); }
     lastDebounceTime = millis();
   }
   if (digitalRead(PIN2) == LOW) {
     if (millis() - lastDebounceTime < DEBOUNCE_DELAY) { return;}
     Serial.println('B');
+    if (DEBUG) { Serial.println("Button B pressed"); }
     lastDebounceTime = millis();
   }
   if (digitalRead(PIN3) == LOW) {
     if (millis() - lastDebounceTime < DEBOUNCE_DELAY) { return;}
     Serial.println('C');
+    if (DEBUG) { Serial.println("Button C pressed"); }
     lastDebounceTime = millis();
   }
   if (digitalRead(PIN4) == LOW) {
     if (millis() - lastDebounceTime < DEBOUNCE_DELAY) { return;}
     Serial.println('D');
+    if (DEBUG) { Serial.println("Button D pressed"); }
     lastDebounceTime = millis();
   }
 }
